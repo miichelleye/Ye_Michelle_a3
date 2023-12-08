@@ -1,0 +1,713 @@
+<!-- View using (2560 × 1600) Display -->
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Michelle Ye</title>
+    <style>
+      h2,
+      h1 {
+        color: white;
+        font-weight: 400;
+      }
+
+      h3 {
+        color: white;
+        margin-left: 2rem;
+        margin-top: 0;
+        margin-bottom: 0;
+        font-size: 18.5px;
+      }
+
+      p {
+        color: white;
+        margin-left: 2rem;
+        margin-top: 0;
+        margin-bottom: 0;
+      }
+
+      body {
+        margin: 0;
+        font-family: "Helvetica Neue", sans-serif;
+        background: #000;
+        font-size: 16px;
+        font-weight: 400;
+        line-height: 1.2;
+      }
+
+      a:link,
+      a:visited,
+      .nav-list a:link,
+      .nav-list a:visited {
+        color: #fff;
+        text-decoration: none;
+        display: inline-block;
+        position: relative;
+        padding: 15px;
+      }
+
+      .nav-list a:hover,
+      .nav-list a:active,
+      a:hover,
+      a:active {
+        color: #1db954;
+        text-decoration: none;
+        transition: color 0.3s ease;
+      }
+
+      .nav-list {
+        display: flex;
+        margin: 0;
+        padding: 0;
+        list-style: none;
+      }
+
+      .nav-list li {
+        margin-left: 1em;
+      }
+
+      .nav-list a {
+        color: white;
+        text-decoration: none;
+        display: inline-block;
+      }
+
+      .nav {
+        display: flex;
+        justify-content: space-between;
+        align-items: center;
+        padding: 20px 30px;
+        float: right;
+      }
+
+      .nav-btn {
+        color: #1db954;
+        background-color: transparent;
+        border: 1px solid #1db954;
+        padding: 10px 20px;
+        border-radius: 50px;
+        cursor: pointer;
+      }
+
+      .nav-btn:hover {
+        background-color: #1db954;
+        color: #fff;
+        transition: background-color 0.3s ease, color 0.3s ease;
+      }
+
+      .hero-container {
+        clear: both;
+        display: flex;
+        align-items: center;
+      }
+
+      .hero {
+        height: 100vh;
+        display: flex;
+        align-items: center;
+        justify-content: center;
+        text-align: center;
+        flex-direction: column;
+      }
+
+      .hero h1 {
+        margin: 0;
+        line-height: 1em;
+        font-size: 100px;
+      }
+
+      .hero h2 {
+        margin: 0;
+        font-size: 2.5em;
+        line-height: 1;
+        color: #fff;
+      }
+      .hero h3 {
+        margin: 0;
+        font-size: 1.5em;
+        line-height: 1;
+        color: #fff;
+      }
+
+      .spotify-column {
+        width: 430px;
+        text-align: center;
+        display: inline-block;
+        padding-bottom: 4rem;
+      }
+
+      .spotify-row {
+        display: flex;
+        justify-content: center;
+      }
+
+      #section2,
+      #section4 {
+        background-color: #000;
+        padding: 70px;
+      }
+
+      #section1 {
+        background-color: #fff;
+        padding: 70px;
+      }
+
+      #section1 h1 {
+        margin-top: -10px;
+        font-size: 87px;
+        font-weight: 500;
+        float: left;
+        color: black;
+        font-weight: 300;
+      }
+
+      #section2 a:link,
+      a:visited {
+        text-decoration: underline;
+        padding: 0;
+      }
+
+      #section1 h2 {
+        font-size: 30px;
+        float: right;
+        margin-top: -40px;
+        margin-bottom: 20px;
+        color: black;
+      }
+
+      #section3 {
+        background-color: #fff;
+        padding: 70px;
+      }
+
+      #section3 p {
+        font-size: 18.54px;
+      }
+
+      table {
+        width: 100%;
+        text-align: left;
+      }
+
+      th,
+      td {
+        padding: 15px;
+        border-bottom: 1px solid #ddd; /* Border between table rows */
+      }
+
+      footer {
+        display: flex;
+        text-align: center;
+        justify-content: space-between;
+        font-size: 80%;
+        align-items: center;
+      }
+
+      footer p {
+        text-align: left;
+        color: white;
+      }
+
+      footer a {
+        text-align: right;
+        color: #000;
+      }
+
+      .food {
+        margin: 1rem;
+      }
+
+      .widget-title h4:hover {
+        color: #1db954;
+        text-decoration: none;
+        transition: color 0.3s ease;
+      }
+
+      /* Code copied from: https://unused-css.com/blog/animated-down-arrow/
+        Author: unused-css.com
+        Name: Animated Scroll Down Arrow
+        Description: Animated scroll arrow for home
+        Date retrieved: Nov 23, 2023 */
+
+      /* Copied code starts  */
+      .scroll-down {
+        position: absolute;
+        left: 50%;
+        bottom: 10px;
+        display: block;
+        text-align: center;
+        font-size: 20px;
+        z-index: 100;
+        text-decoration: none;
+        text-shadow: 0;
+        width: 25px;
+        height: 25px;
+        border-bottom: 2px solid #fff;
+        border-right: 2px solid #fff;
+        z-index: 9;
+        left: 50%;
+        -webkit-transform: translate(-50%, 0%) rotate(45deg);
+        -moz-transform: translate(-50%, 0%) rotate(45deg);
+        transform: translate(-50%, 0%) rotate(45deg);
+        -webkit-animation: fade_move_down 4s ease-in-out infinite;
+        -moz-animation: fade_move_down 4s ease-in-out infinite;
+        animation: fade_move_down 4s ease-in-out infinite;
+      }
+
+      @-webkit-keyframes fade_move_down {
+        0% {
+          -webkit-transform: translate(0, -10px) rotate(45deg);
+          opacity: 0;
+        }
+        50% {
+          opacity: 1;
+        }
+        100% {
+          -webkit-transform: translate(0, 10px) rotate(45deg);
+          opacity: 0;
+        }
+      }
+      @-moz-keyframes fade_move_down {
+        0% {
+          -moz-transform: translate(0, -10px) rotate(45deg);
+          opacity: 0;
+        }
+        50% {
+          opacity: 1;
+        }
+        100% {
+          -moz-transform: translate(0, 10px) rotate(45deg);
+          opacity: 0;
+        }
+      }
+      @keyframes fade_move_down {
+        0% {
+          transform: translate(0, -10px) rotate(45deg);
+          opacity: 0;
+        }
+        50% {
+          opacity: 1;
+        }
+        100% {
+          transform: translate(0, 10px) rotate(45deg);
+          opacity: 0;
+        }
+      }
+      /* Copied code ends */
+
+      .title-cooking {
+        color: black;
+        font-weight: 300;
+        margin-left: 2rem;
+      }
+
+      .title-spotify {
+        margin-left: 5%;
+        float: left;
+        color: white;
+        font-weight: 300;
+      }
+      .spotify-description {
+        text-align: left;
+        margin-left: 5%;
+        margin-top: 8%;
+        color: white;
+        width: 60%;
+        font-size: 50px;
+        font-weight: 400;
+      }
+
+      .me {
+        width: 50%;
+        display: flex;
+        justify-content: center;
+        flex-direction: column;
+        align-items: center;
+      }
+
+      .right-text {
+        width: 45%;
+        text-align: left;
+        margin-top: -5em;
+        font-weight: 390;
+        font-size: 18px;
+        line-height: 1.375;
+        margin-left: auto;
+      }
+
+      .left-text {
+        text-align: left;
+        margin-left: 3%;
+        margin-top: 8%;
+        font-size: 40px;
+        font-weight: 400;
+        align-items: center;
+        -webkit-text-fill-color: #1db954;
+      }
+
+      .now-playing {
+        display: flex;
+        color: white;
+        margin-top: 1rem;
+        margin-bottom: 1rem;
+        align-items: center;
+      }
+
+      .now-playing h4 {
+        margin-left: 1rem;
+        margin-bottom: 0rem;
+        margin-top: 0rem;
+        font-size: 24px;
+      }
+
+      .album {
+        width: 5rem;
+        height: 5rem;
+      }
+
+      .widget {
+        display: flex;
+        border: gray solid;
+        padding: 0.5rem;
+        border-radius: 1rem;
+        align-items: center;
+      }
+
+      .widget-title {
+        color: white;
+        display: flex;
+        padding-left: 1rem;
+        align-items: center;
+      }
+
+      .widget-title h4 {
+        padding-left: 1rem;
+        margin: 0;
+      }
+
+      .widget h5 {
+        color: gray;
+        padding-left: 1rem;
+        margin: 0;
+      }
+
+      .spotify-widget {
+        width: 54%;
+      }
+
+      .cooking-content {
+        display: flex;
+        justify-content: space-between;
+      }
+
+      .row {
+        display: flex;
+        justify-content: flex-end;
+      }
+
+      .image {
+        position: relative;
+        border-radius: 100px;
+      }
+
+      .cooking-text {
+        color: black;
+        font-size: 18px;
+        line-height: 1.375;
+        margin-left: 2rem;
+      }
+
+      .image-grid h2 {
+        color: black;
+        margin-top: -8.5%;
+        text-align: center;
+        margin-right: 2rem;
+      }
+
+      /* Overlay cooking images */
+      .overlay:hover {
+        opacity: 70%;
+        transition: 0.5s ease;
+      }
+    </style>
+  </head>
+  <body>
+    <nav class="nav">
+      <ul class="nav-list">
+        <li>
+          <a href="#section1">WORK</a>
+        </li>
+        <li>
+          <a href="#section2">SPOTIFY</a>
+        </li>
+        <li>
+          <a href="#section3">COOKING</a>
+        </li>
+      </ul>
+      <a href="mailto:m7ye@uwaterloo.ca">
+        <button class="nav-btn">CONTACT</button>
+      </a>
+    </nav>
+    <div class="hero-container">
+      <div class="me">
+        <img
+          src="../Pages/CartoonMe.png"
+          alt="Cartoon Self"
+          width="50%"
+          height="auto"
+        />
+        <div class="spotify-widget">
+          <div class="now-playing">
+            <!-- Image from: https://he.m.wikipedia.org/wiki/%D7%A7%D7%95%D7%91%D7%A5:Spotify_logo_without_text.svg -->
+            <img
+              src="../Pages/spotify.png"
+              alt="Spotify Logo"
+              width="10%;"
+              height="auto;"
+            />
+            <h4>Currently Loving</h4>
+          </div>
+          <div class="widget">
+            <!-- Image from: https://www.google.com/url?sa=i&url=https%3A%2F%2Fopen.spotify.com%2Ftrack%2F4nVBt6MZDDP6tRVdQTgxJg&psig=AOvVaw04H6lrAMT0mAJf8iMXxI-1&ust=1702091269458000&source=images&cd=vfe&opi=89978449&ved=0CBQQjhxqFwoTCLjDnZ7u_oIDFQAAAAAdAAAAABAD -->
+            <img src="../Pages/Album.jpeg" class="album" />
+            <!-- If widget text clicked, opens song in new tab-->
+            <a
+              href="https://open.spotify.com/track/4nVBt6MZDDP6tRVdQTgxJg?si=9445a845c200407b"
+              target="_blank"
+            >
+              <div class="widget-info">
+                <div class="widget-title">
+                  <img
+                    src="../Pages/bar.png"
+                    alt="Spotify Bar"
+                    width="10%"
+                    height="auto"
+                  />
+                  <h4>Story of My Life</h4>
+                </div>
+                <h5>One Direction</h5>
+              </div>
+            </a>
+          </div>
+        </div>
+      </div>
+      <div>
+        <section class="hero" id="hero">
+          <div>
+            <h1>Hi!</h1>
+            <h1>I'm Michelle</h1>
+            <h2>
+              Student @ UWaterloo <br />
+              Born in Toronto <br />
+              Living in Waterloo
+            </h2>
+          </div>
+        </section>
+      </div>
+      <div class="scroll-down"></div>
+    </div>
+    <div id="section1">
+      <h1>
+        SELECTED WORKS (2018—<br />
+        2027)
+      </h1>
+      <h2>
+        Overview of my latest experience within UX/UI, <br />
+        Digital Design + Digital Marketing, <br />
+        and Cinematography.
+      </h2>
+      <table>
+        <thead>
+          <tr>
+            <th>Experience</th>
+            <th>Year</th>
+          </tr>
+        </thead>
+        <tbody>
+          <tr>
+            <td>University of Waterloo - Global Business and Digital Arts</td>
+            <td>2022-2027</td>
+          </tr>
+          <tr>
+            <td>Marketing Associate @ Ascend</td>
+            <td>2023-2024</td>
+          </tr>
+          <tr>
+            <td>Digital Marketing | Web Design Intern @ PHS Canada</td>
+            <td>2021-2022</td>
+          </tr>
+          <tr>
+            <td>Videographer | Photographer @ VBS</td>
+            <td>2018</td>
+          </tr>
+        </tbody>
+      </table>
+    </div>
+    <div id="section2">
+      <h1 class="title-spotify">SPOTIFY</h1>
+      <h2 class="spotify-description">
+        <!-- If "Spotify" clicked, opens Spotify about page in new tab -->
+        <a href="https://newsroom.spotify.com/company-info/" target="_blank"
+          >Spotify</a
+        >
+        Is a Universal Music and Podcast Platform That Gives Users Access to
+        Millions of Songs and Content From Creators and Artists All Around the
+        Globe.
+      </h2>
+      <div class="left-text">
+        <p>(TOP 3 ARTISTS)</p>
+      </div>
+      <h3 class="right-text">
+        Spotify surrounds most of my days. I have a wide range of music that I
+        listen to (129 genres — according to spotify wrapped 2023) but my top
+        genres are pop, rap, and r&b. I enjoy music with introspective
+        storytelling that makes me feel like I am in another universe.
+        <br />
+        <br />
+        Feel free to look through the discography of some of my favourite
+        artists below.
+      </h3>
+    </div>
+
+    <!-- Code copied from: https://developer.spotify.com/documentation/embeds/tutorials/using-the-iframe-api
+        Author: spotify.com
+        Name: Using the iFrame API
+        Description: Displays playlist with direct link
+        Date retrieved: Nov 23, 2023 -->
+    <!-- Copied code starts -->
+
+    <div class="spotify-row">
+      <div class="spotify-column">
+        <iframe
+          style="border-radius: 12px"
+          src="https://open.spotify.com/embed/playlist/37i9dQZF1DZ06evO2NufN6?utm_source=generator"
+          width="390px"
+          height="450px"
+          frameborder="0"
+          allow="autoplay; clipboard-write; encrypted-media; fullscreen; picture-in-picture"
+          loading="lazy"
+        ></iframe>
+      </div>
+      <div class="spotify-column">
+        <iframe
+          style="border-radius: 12px"
+          src="https://open.spotify.com/embed/playlist/37i9dQZF1DZ06evO18rRzG?utm_source=generator"
+          width="390px"
+          height="450px"
+          frameborder="0"
+          allow="autoplay; clipboard-write; encrypted-media; fullscreen; picture-in-picture"
+          loading="lazy"
+        ></iframe>
+      </div>
+      <div class="spotify-column">
+        <iframe
+          style="border-radius: 12px"
+          src="https://open.spotify.com/embed/playlist/37i9dQZF1DXdyjMX5o2vCq?utm_source=generator"
+          width="390px"
+          height="450px"
+          frameborder="0"
+          allow="autoplay; clipboard-write; encrypted-media; fullscreen; picture-in-picture"
+          loading="lazy"
+        ></iframe>
+      </div>
+    </div>
+    <!-- Copied code ends -->
+
+    <div id="section3">
+      <h1 class="title-cooking">COOKING</h1>
+      <div class="cooking-content">
+        <p class="cooking-text">
+          One of my many joys in life is cooking. <br />
+          Not only is it therapeutic, it is a great way <br />
+          to save money as a university student.
+          <br />
+          <br />
+          Cooking allows me to take take things <br />
+          slow and master the craft of trusting the <br />
+          process to create a yummy dish.
+          <br />
+          <br />
+          Creating new meals myself has been an <br />
+          important a part of my life from a very <br />
+          young age. From as early as I could <br />
+          remember, you could always find me <br />
+          in the kitchen cooking my next meal or <br />
+          for my family.
+          <br />
+          <br />
+          <br />
+          <br />
+          <br />
+          <br />
+          Check out some meals I have made in <br />
+          the month of September 2023.
+        </p>
+        <div class="image-grid">
+          <h2>My Staple Meals</h2>
+          <div>
+            <div class="row">
+              <!-- if image clicked, opens recipe in new tab -->
+              <a
+                href="https://www.wellplated.com/korean-beef-bowl/"
+                target="_blank"
+                class="link"
+              >
+                <img
+                  src="../Pages/LeftImage.jpeg"
+                  alt="Beef Bowl"
+                  class="image overlay"
+                  style="width: 20rem; height: auto"
+                />
+              </a>
+
+              <a
+                href="https://natashaskitchen.com/teriyaki-salmon-recipe/"
+                target="_blank"
+                class="link"
+              >
+                <img
+                  src="../Pages/RightImage.jpeg"
+                  alt="Salmon"
+                  class="image overlay"
+                  style="width: 20rem; height: auto"
+                />
+              </a>
+            </div>
+            <div class="row">
+              <a
+                href="https://www.bonappetit.com/recipe/stir-fried-udon-with-pork"
+                target="_blank"
+                class="link"
+              >
+                <img
+                  src="../Pages/MiddleImage.jpeg"
+                  alt="Udon"
+                  class="image overlay"
+                  style="width: 20rem; height: auto"
+                />
+              </a>
+
+              <a
+                href="https://japan.recipetineats.com/katsu-curry-japanese-curry-rice-with-chicken-cutlet/"
+                target="_blank"
+                class="link"
+              >
+                <img
+                  src="../Pages/curry.jpeg"
+                  alt="Curry"
+                  class="image overlay"
+                  style="width: 20rem; height: auto"
+                />
+              </a>
+            </div>
+          </div>
+        </div>
+      </div>
+    </div>
+    <footer>
+      <p>Michelle Ye &copy; 2023 All Rights Reserved.</p>
+      <a href="#hero">Back To Top</a>
+    </footer>
+  </body>
+</html>
